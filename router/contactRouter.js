@@ -1,12 +1,9 @@
 const express = require('express');
-const contactController = require('../controller/contactController');
-const LoginRoutes = express.Router();
+const ContactController = require('../controller/contactController');
+const ContactRoutes= express.Router()
 
 
-LoginRoutes.post('/login', contactController.login);
-LoginRoutes.post('/signin', contactController.Sign);
-LoginRoutes.post('/logout',contactController.logout)
+ContactRoutes.post('/contact',ContactController.ContactForm)
 
 
-
-module.exports = LoginRoutes;
+module.exports = ContactRoutes
